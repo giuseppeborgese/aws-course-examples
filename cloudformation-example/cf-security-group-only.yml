@@ -1,0 +1,22 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description:
+  This is a simple stack to create a Security grouop only
+
+Parameters:
+  Prefix:
+    Type: String
+    Description: this is a prefix for all the resources.
+
+  VPC:
+    Type: AWS::EC2::VPC::Id
+    Description: choose the VPC where there is also the subnet
+
+Resources:
+  MySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: created with cloudformation versione 2
+      GroupName: !Sub '${Prefix}-mySG'
+      VpcId: !Ref VPC

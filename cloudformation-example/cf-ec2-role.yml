@@ -1,0 +1,65 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description:
+  This separate stack is to keep it there and avoid wrong deletion
+
+Parameters:
+  Prefix:
+    Type: String
+    Description: this is a prefix for all the resources.
+
+  SubnetForEc2:
+    Type: AWS::EC2::Subnet::Id
+    Description: a subnet taken from the list in the region
+
+  VPC:
+    Type: AWS::EC2::VPC::Id
+    Description: choose the VPC where there is also the subnet
+
+Resources:
+  MyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+           - Effect: Allow
+             Principal:
+               Service:
+                 - ec2.amazonaws.com
+             Action:
+               - 'sts:AssumeRole'
+      Description: 'this is a role to test cloudformation'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      Path: /
+      RoleName: !Sub '${Prefix}-myrole'
+
+  MyProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: !Sub '${Prefix}-myprofile'
+      Roles:
+        - !Ref MyRole
+
+  MySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: created with cloudformation
+      GroupName: !Sub '${Prefix}-mySG'
+      VpcId: !Ref VPC
+
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: 'ami-0f89681a05a3a9de7'  # image from Ireland , remember you can run only t2.micro there
+      IamInstanceProfile: !Ref MyProfile
+      InstanceType: 't2.micro'
+      SubnetId: !Ref SubnetForEc2
+      SecurityGroupIds:
+        - !Ref MySecurityGroup
+      Tags:
+        -
+          Key: Name
+          Value: ntt Test 
