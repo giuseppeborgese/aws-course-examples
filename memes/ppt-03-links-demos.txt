@@ -1,0 +1,20 @@
+LINKS
+logs user data https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-log-user-data/
+
+
+DEMO
+
+curl http://169.254.169.254/latest/user-data
+
+Ec2 ==> Spot Requests ==> Pricing History , change instance type
+
+create an instance with httpd and login 
+put in default vpc
+
+#!/bin/bash -xe
+exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+  yum install -y httpd
+  echo "hello from aws class </br>" > /var/www/html/index.html
+  curl  http://169.254.169.254/latest/meta-data/hostname >>  /var/www/html/index.html
+  service httpd start
+  echo "the end"
