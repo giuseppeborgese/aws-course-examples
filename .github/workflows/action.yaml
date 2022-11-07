@@ -1,0 +1,10 @@
+name: run on custom runner
+
+on: push
+
+jobs:
+  init:
+  runs-on: pepperun
+  steps:
+    - run: echo "ciao mondo"
+    - run: hostname
