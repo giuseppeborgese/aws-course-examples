@@ -20,3 +20,8 @@ Resources:
       GroupDescription: created with cloudformation versione 2
       GroupName: !Sub '${Prefix}-mySG'
       VpcId: !Ref VPC
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        CidrIp: 0.0.0.0/0
