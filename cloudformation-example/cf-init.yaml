@@ -7,7 +7,7 @@ Description:
 Parameters:
   Prefix:
     Type: String
-    Description: this is a prefix for all the resources.
+    Description: this is a prefix for all the resources you cannot use number, it is checked only when we submit the template.
     AllowedPattern: ^[a-zA-Z]*$
 
 
