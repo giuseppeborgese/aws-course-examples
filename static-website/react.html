@@ -1,0 +1,56 @@
+import { useState } from "react";
+import axios from 'axios';
+
+const ContactForm = () => {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [submitting, setSubmitting] = useState(false);
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      setSubmitting(true);
+      await axios.post('https://api.example.com/contact', {
+        name,
+        email,
+        message
+      });
+      alert("Successfully submitted form");
+    } catch (e) {
+      alert("Something went wrong while submitting the form");
+      console.error("Something went wrong while submitting the form", e);
+    } finally {
+      setName('');
+      setEmail('');
+      setMessage('');
+      setSubmitting(false);
+    }
+  }
+
+  return (
+    <>
+      <h1>Contact</h1>
+      <form onSubmit={onSubmit}>
+        <label>
+          Name:
+          <input type="text" required value={name} onChange={e => setName(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" required value={email} onChange={e => setEmail(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Message:
+          <textarea required value={message} onChange={e => setMessage(e.target.value)} />
+        </label>
+        <br />
+        <input type="submit" value="Submit" disabled={submitting} />
+      </form>
+    </>
+  );
+}

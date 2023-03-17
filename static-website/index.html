@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Feedback</title>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Course Feedback</h1>
+  <form id="feedback-form">
+    <label for="feedback-text">How is the course going for you?</label>
+    <br>
+    <textarea id="feedback-text" rows="4" cols="50"></textarea>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="submit-message"></div>
+
+  <script>
+  // Get references to the form and submit message element
+  const form = document.getElementById("feedback-form");
+  const submitMessage = document.getElementById("submit-message");
+
+  // Handle form submission
+  form.addEventListener("submit", event => {
+    event.preventDefault(); // Prevent form from submitting
+
+    // Get the feedback text
+    const feedbackText = document.getElementById("feedback-text").value;
+
+    // Send the feedback to the server
+    fetch("https://r8i1c5x64a.execute-api.eu-west-1.amazonaws.com/default/feedback-course", {
+      method: "POST",
+      body: JSON.stringify({ feedback: feedbackText }),
+      headers: { "Content-Type": "application/json" }
+    })
+      .then(response => response.json())
+      .then(data => {
+        submitMessage.innerHTML = "Feedback submitted successfully!";
+      })
+
+      .catch(error => {
+        console.error("Error:", error);
+        submitMessage.innerHTML = "An error occurred while submitting feedback.A";
+      });
+  });
+  </script>
+</body>
+</html>

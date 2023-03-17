@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+<title>DAY 1</title></head>
+<body>
+	<outline text="DAY 1">
+		<outline text="MOD 1">
+			<outline text="SECURITY IN AWS">
+			</outline>
+			<outline text="SHARED MODEL">
+				<outline text="SERVICES MODEL">
+				</outline>
+				<outline text="MSO">
+				</outline>
+			</outline>
+			<outline text="INCIDENT RESPONSE">
+			</outline>
+			<outline text="DEVOPS WITH SEC ENG">
+			</outline>
+		</outline>
+		<outline text="MOD 2 ENTRY POINT">
+			<outline text="API">
+			</outline>
+			<outline text="ROOT USER">
+			</outline>
+			<outline text="IAM POLICIES">
+				<outline text="TYPES">
+				</outline>
+				<outline text="UNDERSTANDING">
+				</outline>
+				<outline text="EXAMPLE">
+				</outline>
+				<outline text="PERMISSION BOUNDARY">
+				</outline>
+			</outline>
+			<outline text="MFA">
+			</outline>
+			<outline text="CLOUDTRAIL">
+			</outline>
+		</outline>
+		<outline text="MOD 4 APP SEC">
+			<outline text="SYSTEM MANAGER">
+			</outline>
+			<outline text="EC2">
+				<outline text="KEY PAIRS">
+				</outline>
+				<outline text="AMI">
+				</outline>
+				<outline text="INSPECTOR">
+				</outline>
+			</outline>
+		</outline>
+		<outline text="MOD 3 SEC ON WEB APP">
+			<outline text="THREAT">
+			</outline>
+			<outline text="ASSESSING">
+				<outline text="TRUSTED ADVISOR">
+				</outline>
+				<outline text="IQ">
+				</outline>
+			</outline>
+		</outline>
+	</outline>
+</body>
+</opml>

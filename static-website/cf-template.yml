@@ -1,0 +1,76 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  FeedbackLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: FeedbackLambdaFunction
+      Runtime: python3.8
+      Handler: index.handler
+      Code:
+        ZipFile: |
+          import json
+          import boto3
+          s3 = boto3.client('s3')
+
+          def handler(event, context):
+              feedback = json.loads(event['body'])['feedback']
+              s3.put_object(
+                  Bucket='my-feedback-bucket',
+                  Key='feedbacks/' + str(int(time.time())) + '.txt',
+                  Body=feedback
+              )
+              return {
+                  'statusCode': 201,
+                  'headers': {'Content-Type': 'application/json'},
+                  'body': json.dumps('Feedback saved successfully')
+              }
+  FeedbackApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: 'prod'
+      DefinitionBody:
+        swagger: '2.0'
+        info:
+          title: 'Feedback API'
+          version: '1.0'
+        paths:
+          '/feedback':
+            post:
+              consumes:
+                - 'application/json'
+              produces:
+                - 'application/json'
+              x-amazon-apigateway-integration:
+                type: 'aws_proxy'
+                uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${FeedbackLambdaFunction.Arn}/invocations"
+                httpMethod: POST
+                credentials: !GetAtt FeedbackLambdaFunctionRole.Arn
+  FeedbackLambdaFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          StringEquals:
+            aws:SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:*"
+        Condition:
+          StringLike:
+            aws:SourceAccount: !Ref AWS::AccountId
+        Condition:
+          IpAddress:
+            aws:SourceIp:
+              - '192.0.2.0/24'
+              - '198.51.100.0/24'
+        Condition:
+          Null:
+            aws:SourceVpc: 'true'
+        Condition:
+          StringEquals:
+            aws:SourceVpce: !Ref VpceId
+        Condition:
+          StringEquals:
+            aws:userId: !Ref AWS::AccountId
+        Effect: Allow
+        Principal:
+          "*"
