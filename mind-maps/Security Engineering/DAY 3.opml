@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+<title>DAY 3</title></head>
+<body>
+	<outline text="DAY 3">
+		<outline text="MOD 11 SERVERLESS">
+			<outline text="COGNITO">
+			</outline>
+			<outline text="API GW">
+			</outline>
+			<outline text="LAMBDA ">
+			</outline>
+		</outline>
+		<outline text="MOD 12 DETECT &#10;INVESTIGATE">
+			<outline text="GUARDDUTY">
+			</outline>
+			<outline text="SECURITY HUB">
+			</outline>
+			<outline text="DETECTIVE">
+			</outline>
+		</outline>
+		<outline text="MOD 13 SECRET &#10;MANAGER">
+			<outline text="KMS">
+			</outline>
+			<outline text="CLOUD HSM">
+			</outline>
+			<outline text="SECRET MANGER">
+			</outline>
+		</outline>
+		<outline text="LAB 5">
+		</outline>
+		<outline text="LAB 7">
+		</outline>
+		<outline text="MOD15 &#10;ACCOUNTS&#10;MANAGEMENT">
+			<outline text="FEDERATING">
+				<outline text="SSO">
+				</outline>
+				<outline text="DIRECTORY SERVICE">
+				</outline>
+			</outline>
+			<outline text="MANAGING">
+				<outline text="ORGANIZATION">
+				</outline>
+				<outline text="CONTROL TOWER">
+				</outline>
+			</outline>
+		</outline>
+		<outline text="LAB 6">
+		</outline>
+		<outline text="MOD 14 &#10;AUTOMATION&#10;SECURITY">
+			<outline text="BUILD SEC ENV">
+				<outline text="CLOUDFORMATION">
+				</outline>
+				<outline text="ENFORCING TEMPLATES">
+				</outline>
+			</outline>
+		</outline>
+	</outline>
+</body>
+</opml>

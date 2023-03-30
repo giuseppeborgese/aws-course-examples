@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+<title>DAY 2</title></head>
+<body>
+	<outline text="DAY 2">
+		<outline text="MOD 5 DATA SEC">
+			<outline text="S3">
+				<outline text="DATA AT REST">
+				</outline>
+				<outline text="RESOURCE PROTECTION">
+				</outline>
+				<outline text="ACCESS ANALYZER">
+				</outline>
+				<outline text="ACCESS POINTS">
+				</outline>
+			</outline>
+			<outline text="DATABASE">
+				<outline text="RDS">
+				</outline>
+				<outline text="DYNAMODB">
+				</outline>
+			</outline>
+			<outline text="ARCHIVAL">
+				<outline text="ARCHIVAL">
+				</outline>
+				<outline text="VAULT LOCK">
+				</outline>
+			</outline>
+		</outline>
+		<outline text="MOD 6">
+			<outline text="VPC">
+			</outline>
+			<outline text="TRAFFIC MIRRORING">
+			</outline>
+			<outline text="RESPONDING COMPROMISED INSTANCES ">
+			</outline>
+			<outline text="PEERING">
+			</outline>
+			<outline text="VPC ENDPOINT">
+				<outline text="INTERFACE">
+				</outline>
+				<outline text="GATEWAY">
+				</outline>
+			</outline>
+			<outline text="ELB SECURITY">
+			</outline>
+			<outline text="CERTIFICATE MANAGER">
+			</outline>
+		</outline>
+		<outline text="MOD 7 LOGS">
+			<outline text="MONITORING">
+				<outline text="CLOUDWATCH">
+				</outline>
+				<outline text="CONFIG">
+				</outline>
+				<outline text="MACIE">
+				</outline>
+			</outline>
+			<outline text="LOGGING">
+				<outline text="CW LOGS">
+				</outline>
+				<outline text="VPC FLOW LOGS">
+				</outline>
+				<outline text="S3 ACCESS LOGS">
+				</outline>
+				<outline text="ELB ACCESS LOGS">
+				</outline>
+			</outline>
+		</outline>
+		<outline text="LAB 3">
+		</outline>
+		<outline text="MOD 10 OUT&#10;OF REGION">
+			<outline text="RESPONDING INCIDENTS">
+			</outline>
+			<outline text="DOS ON AWS">
+				<outline text="FIREWALL MANAGER">
+				</outline>
+				<outline text="SHIELD">
+				</outline>
+				<outline text="CLOUDFRONT">
+				</outline>
+				<outline text="WAF">
+				</outline>
+				<outline text="ROUTE53">
+				</outline>
+			</outline>
+			<outline text="DOS">
+			</outline>
+		</outline>
+		<outline text="MOD 9 HYBRIDS">
+			<outline text="VPN">
+				<outline text="CLIENT">
+				</outline>
+				<outline text="SITE TO SITE">
+				</outline>
+			</outline>
+			<outline text="DIRECT CONNECT">
+			</outline>
+			<outline text="TRANSIT GW">
+			</outline>
+		</outline>
+		<outline text="LAB 4">
+		</outline>
+		<outline text="MOD 8 LOGS&#10;PROCESSING">
+			<outline text="ATHENA">
+			</outline>
+			<outline text="KINESIS DATA">
+				<outline text="STREAM">
+				</outline>
+				<outline text="FIREHOSE">
+				</outline>
+				<outline text="ANALYTICS">
+				</outline>
+			</outline>
+		</outline>
+	</outline>
+</body>
+</opml>
