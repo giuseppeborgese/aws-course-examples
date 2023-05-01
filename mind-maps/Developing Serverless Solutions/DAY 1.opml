@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+<title>DAY 1</title></head>
+<body>
+	<outline text="DAY 1">
+		<outline text="MOD 1">
+			<outline text="INTRO">
+				<outline text="SERVERLESS VS MONOLITH">
+				</outline>
+				<outline text="MODERN PIECES">
+				</outline>
+			</outline>
+			<outline text="SPLIT WORK">
+			</outline>
+			<outline text="EVENT-DRIVEN">
+			</outline>
+			<outline text="ON AWS">
+			</outline>
+		</outline>
+		<outline text="MOD 2">
+			<outline text="API GW">
+				<outline text="API TYPES">
+				</outline>
+				<outline text="ENDPOINT INTEGRATION">
+				</outline>
+			</outline>
+			<outline text="GRAPHQL with APPSYNC">
+			</outline>
+		</outline>
+		<outline text="MOD 3">
+			<outline text="AUTHENT &amp; AUTHORIZ">
+			</outline>
+			<outline text="API GW AUTHORIZERS">
+				<outline text="JWT">
+				</outline>
+				<outline text="IAM POLICY">
+				</outline>
+				<outline text="LAMBDA CUSTOM">
+				</outline>
+			</outline>
+			<outline text="COGNITO">
+				<outline text="USER POOLS">
+					<outline text="3 JWTs TOKEN">
+						<outline text="USER">
+						</outline>
+						<outline text="API CALLS">
+						</outline>
+						<outline text="REFRESH">
+						</outline>
+					</outline>
+				</outline>
+				<outline text="IDENTITY POOLS">
+					<outline text="IAM AUTHENTICATION">
+					</outline>
+				</outline>
+			</outline>
+		</outline>
+		<outline text="MOD 6">
+			<outline text="DATA STREAM">
+				<outline text="KINESIS">
+				</outline>
+				<outline text="DYNAMO">
+				</outline>
+			</outline>
+			<outline text="SQS">
+			</outline>
+			<outline text="POLL EVENTS">
+			</outline>
+		</outline>
+		<outline text="MOD 5">
+			<outline text="SNS">
+				<outline text="+ SIMPLER">
+				</outline>
+				<outline text="- FEATURES">
+				</outline>
+			</outline>
+			<outline text="EVENTBRIDGE">
+				<outline text="+ COMPLEX">
+				</outline>
+				<outline text="+ FEATURES">
+				</outline>
+			</outline>
+		</outline>
+		<outline text="MOD 4">
+			<outline text="AMPLIFY FRAMEWORK">
+			</outline>
+			<outline text="SAM">
+			</outline>
+			<outline text="CDK">
+			</outline>
+			<outline text="CLOUDFORMATION">
+			</outline>
+		</outline>
+	</outline>
+</body>
+</opml>

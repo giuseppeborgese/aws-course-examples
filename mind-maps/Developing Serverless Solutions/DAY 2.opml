@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+<title>DAY 2</title></head>
+<body>
+	<outline text="DAY 2">
+		<outline text="MOD 7">
+			<outline text="LAMBDA">
+				<outline text="APPLICATIONS">
+				</outline>
+				<outline text="LIFECYCLE">
+				</outline>
+				<outline text="DB PROXY">
+				</outline>
+				<outline text="EFS">
+				</outline>
+			</outline>
+			<outline text="CONFIGURING">
+				<outline text="PERMISSIONS">
+				</outline>
+				<outline text="MEMORY TIMEOUT">
+				</outline>
+			</outline>
+			<outline text="FUNCTION CODE">
+			</outline>
+			<outline text="VERSION AND ALIASES">
+			</outline>
+			<outline text="RUN AND TEST">
+			</outline>
+			<outline text="ERROR HANDLING">
+				<outline text="SYNC">
+					<outline text="API GW">
+					</outline>
+				</outline>
+				<outline text="ASYNC">
+					<outline text="SNS">
+					</outline>
+				</outline>
+				<outline text="POLLING">
+					<outline text="STREAMS">
+					</outline>
+					<outline text="SQS">
+					</outline>
+				</outline>
+			</outline>
+		</outline>
+		<outline text="MOD 9">
+			<outline text="CLOUDWATCH METRICS">
+				<outline text="SERVICE LENS">
+				</outline>
+			</outline>
+			<outline text="X-RAY">
+			</outline>
+			<outline text="CLOUDWATCH LOGS">
+				<outline text="LOGS INSIGHTS">
+				</outline>
+				<outline text="STRUCTURE THE LOGS">
+				</outline>
+			</outline>
+			<outline text="OSSERVABILITY">
+			</outline>
+		</outline>
+		<outline text="MOD 8">
+			<outline text="STEP FUNCTIONS INTRO">
+			</outline>
+			<outline text="TYPES">
+				<outline text="TASK">
+				</outline>
+				<outline text="CHOICE">
+				</outline>
+				<outline text="PARALLELS">
+				</outline>
+				<outline text="WAIT">
+					<outline text="FOR A JOB">
+					</outline>
+					<outline text="CALLBACK">
+					</outline>
+				</outline>
+				<outline text="MAPS">
+				</outline>
+			</outline>
+			<outline text="ERROR HANDLING">
+			</outline>
+			<outline text="FILTERING">
+			</outline>
+			<outline text="ENRICHING">
+			</outline>
+			<outline text="INTRINSINC FUNCTIONS">
+			</outline>
+			<outline text="INTEGRATION">
+			</outline>
+			<outline text="STANDARD VS EXPRESS">
+			</outline>
+		</outline>
+	</outline>
+</body>
+</opml>

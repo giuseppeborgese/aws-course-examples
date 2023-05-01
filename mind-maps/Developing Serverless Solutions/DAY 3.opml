@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+<title>DAY 3</title></head>
+<body>
+	<outline text="DAY 3">
+		<outline text="MOD 10&#10;SECURITY">
+			<outline text="TRADITIONAL VS SERVERLESS">
+			</outline>
+			<outline text="ALL LAYERS">
+			</outline>
+			<outline text="API GW">
+				<outline text="API ACCESS">
+					<outline text="JWT">
+					</outline>
+					<outline text="LAMBDA">
+					</outline>
+					<outline text="IAM">
+					</outline>
+				</outline>
+				<outline text="API PROTECTING">
+				</outline>
+			</outline>
+			<outline text="LAMBDA">
+				<outline text="ROLE">
+				</outline>
+				<outline text="VPCs">
+				</outline>
+				<outline text="PROTECTION">
+					<outline text="DEPENDENCY">
+					</outline>
+					<outline text="SQL INJECTIONS">
+					</outline>
+					<outline text="SIGNING">
+					</outline>
+					<outline text="SECRET MANAGER">
+					</outline>
+				</outline>
+			</outline>
+			<outline text="SERVERLESS DATA">
+				<outline text="IAM">
+				</outline>
+				<outline text="ENCRYPT AT REST">
+				</outline>
+			</outline>
+		</outline>
+		<outline text="MOD 12&#10;AUTOMATION">
+		</outline>
+		<outline text="MOD 11&#10;SCALING">
+			<outline text="API GW AT SCALE">
+				<outline text="RATE">
+					<outline text="QUOTA/BURST">
+					</outline>
+					<outline text="THROTTLING">
+					</outline>
+				</outline>
+				<outline text="HTTP API">
+				</outline>
+				<outline text="REST API">
+					<outline text="ALL AWS CUSTOMER">
+					</outline>
+					<outline text="PER ACCOUNT PER REGION">
+					</outline>
+					<outline text="PER API PER STAGE">
+					</outline>
+					<outline text="PER CLIENT WITH API KEY">
+					</outline>
+				</outline>
+			</outline>
+			<outline text="LAMBDA AT SCALE">
+				<outline text="CONCURRENCY">
+				</outline>
+				<outline text="BURST">
+				</outline>
+				<outline text="EVENT SOURCE">
+					<outline text="SYNC/ASYNC EVENT">
+					</outline>
+					<outline text="SQS">
+					</outline>
+				</outline>
+				<outline text="KINESIS">
+				</outline>
+			</outline>
+		</outline>
+	</outline>
+</body>
+</opml>
