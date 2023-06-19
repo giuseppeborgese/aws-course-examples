@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: "2010-09-09"
 
 Description:
-  This is a simple stack to create a Security grouop only
+  This is a simple stack to create a Security group only
 
 Parameters:
   Prefix:
