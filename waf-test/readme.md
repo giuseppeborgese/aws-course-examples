@@ -29,3 +29,5 @@ fields httpRequest.clientIp
 | filter action ='BLOCK'
 | limit 100
 ```
+
+You can find other rules example on the post https://aws.amazon.com/it/blogs/mt/analyzing-aws-waf-logs-in-amazon-cloudwatch-logs/ 
