@@ -1,4 +1,4 @@
-# demo for inventory
+# demo for batch
 
 * show the inventory on the borsoft.ch bucket, that create an inventory
 * produce an inventory list with the python code and upload on the bucket inventory
