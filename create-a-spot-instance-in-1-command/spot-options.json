@@ -1,0 +1,7 @@
+{
+    "MarketType": "spot",
+    "SpotOptions": { 
+        "SpotInstanceType": "persistent",
+        "InstanceInterruptionBehavior": "stop"
+    }
+}
