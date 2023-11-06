@@ -9,7 +9,7 @@ We have 2 accounts:
 ### in the "Service Provider"
 * create a public service for example with ecs-demo folder
 * create a target group that points to the ALB
-* create a network load balancer private that points to that target group
+* create a network load balancer private that points to that target group, before proceed to the next step you need to wait the balancer is in available state
 * create in the VPC the "Service Endpoints" that uses that network load balancer
 * go in the option of the new service endpoint and share it with the other account the pricipal for the account account
 ```
@@ -28,4 +28,6 @@ arn:aws:iam::222222222222:root
 * these acceptance will require some minutes, after 1 or 2 minutes refresh and you will see that it is available
 
 ### in the "Service Consumer"
-* you can copy the DNS names from the endpoint and use it inside a machine to test
+* you can copy the DNS names (NOT the service endpoint) from the endpoint and use it inside a machine to test
+
+Remember to destroy everything when you finish to avoid incuring in charges
