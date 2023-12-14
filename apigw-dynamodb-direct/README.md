@@ -1,4 +1,4 @@
-# API GW direct access DynmoDB 
+# API GW direct access DynamoDB 
 
 * in this way the API GW calls directly the DynamoDB and saves lambda cost
 
