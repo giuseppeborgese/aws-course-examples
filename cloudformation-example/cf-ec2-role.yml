@@ -19,11 +19,11 @@ Parameters:
 
   InstanceTypeParameter:
     Type: String
-    Default: t2.micro
+    Default: t3.micro
     AllowedValues:
-      - t2.micro
+      - t3.micro
       - t3.small
-      - t2.medium
+      - t3.medium
     Description: in Ireland only t2.micro will work because I have a system to switch off the others
 Resources:
   MyRole:
@@ -39,8 +39,8 @@ Resources:
              Action:
                - 'sts:AssumeRole'
       Description: 'this is a role to test cloudformation'
-      ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      #ManagedPolicyArns:
+      #  - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
       Path: /
       RoleName: !Sub '${Prefix}-myrole'
 
@@ -54,7 +54,7 @@ Resources:
   MyInstance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: 'ami-0230bd60aa48260c6' #n virginia --- ami-0c637f443e74b2729' #'ami-0f89681a05a3a9de7'  # image from Ireland , remember you can run only t2.micro there
+      ImageId: 'ami-0e731c8a588258d0d' #n virginia --- ami-0c637f443e74b2729' #'ami-0f89681a05a3a9de7'  # image from Ireland , remember you can run only t2.micro there
       IamInstanceProfile: !Ref MyProfile
       InstanceType: !Ref InstanceTypeParameter
       SubnetId: !Ref SubnetForEc2

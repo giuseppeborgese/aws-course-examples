@@ -1,0 +1,45 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description:
+  to test the import
+  
+
+Parameters:
+  Prefix:
+    Type: String
+    Description: this is a prefix for all the resources.
+
+  SubnetForEc2:
+    Type: AWS::EC2::Subnet::Id
+    Description: a subnet taken from the list in the region
+
+  InstanceTypeParameter:
+    Type: String
+    Default: t3.micro
+    AllowedValues:
+      - t3.micro
+      - t3.small
+      - t3.medium
+    Description: in Ireland only t2.micro will work because I have a system to switch off the others
+
+  EC2AMI:
+    Description: ECS-Optimized AMI ID
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-6.1-x86_64
+
+Resources:
+  MyInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref EC2AMI
+      InstanceType: !Ref InstanceTypeParameter
+      SubnetId: !Ref SubnetForEc2
+      SecurityGroupIds:
+        - Fn::ImportValue:
+            "Exported-sg"
+      Tags:
+        -
+          Key: Name
+          Value: !Ref Prefix
+

@@ -31,3 +31,11 @@ Resources:
         FromPort: 80
         ToPort: 80
         CidrIp: 0.0.0.0/0
+
+Outputs:
+  MyExportSG:
+    Description: The ID of SecurityGroup
+    Value: !Ref MySecurityGroup
+    Export:
+      Name: !Sub "Exported-sg"      
+
