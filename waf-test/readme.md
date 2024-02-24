@@ -32,7 +32,7 @@ fields httpRequest.clientIp
 
 You can find other rules example on the post https://aws.amazon.com/it/blogs/mt/analyzing-aws-waf-logs-in-amazon-cloudwatch-logs/ 
 
-# Some Query for SQL Injecto and XSS
+# Some Query for SQL Injections and XSS
 If you are using the managed rules AWS-AWSManagedRulesSQLiRuleSet and AWS-AWSManagedRulesCommonRuleSet the following kinds of attacks will be blocked
 
 ### URL example
