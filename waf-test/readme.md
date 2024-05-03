@@ -31,3 +31,28 @@ fields httpRequest.clientIp
 ```
 
 You can find other rules example on the post https://aws.amazon.com/it/blogs/mt/analyzing-aws-waf-logs-in-amazon-cloudwatch-logs/ 
+
+# Some Query for SQL Injections and XSS
+If you are using the managed rules AWS-AWSManagedRulesSQLiRuleSet and AWS-AWSManagedRulesCommonRuleSet the following kinds of attacks will be blocked
+
+### URL example
+Any query with in the URL something like this
+```
+mywebsits.com/search?q=' or 1=1 --
+```
+the part that block the thing is ' or 1=1 --
+
+### Payload example 1
+if in your payload you have something like this
+```
+{"email":"' or 1=1 --","password":"123"}
+```
+the same content but you see this time is inside the content
+
+### Payload example 2
+a piece of javascript inside the content of the payload
+```
+{"email":"<iframe src=\"javascript:alert(`xss`)\">","password":"123456","passwordRepeat":"123456"}
+```
+
+
