@@ -1,5 +1,5 @@
 locals { 
-  region = "us-east-1"
+  region = "eu-west-1" #us-east-1"
 }
 provider "aws" {
   region = local.region
@@ -11,6 +11,7 @@ module "ecs-fargate-poc" {
   private_subnets = module.vpc.private_subnets
   public_subnets =  module.vpc.public_subnets
   prefix = "terraform-poc"
+  #put the tag at the end :latest or :v1
   image_uri_with_tag = "public.ecr.aws/nginx/nginx:latest"
 }
 
