@@ -1,5 +1,7 @@
 # Balancer blue green deployment
 
+This demo can be used to explain the concetps in the course Advanced Architecting Module 7 (CI/CD) slide 40-41-42
+
 ## Network Load Balancer
 * version 1 is working on port 80
 * version 2 is working on port 8080
