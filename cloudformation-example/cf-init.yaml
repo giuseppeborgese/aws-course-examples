@@ -69,7 +69,7 @@ Resources:
                 ensureRunning: true
     Properties:
       ImageId: 'ami-0f89681a05a3a9de7'  # image from Ireland , remember you can run only t2.micro there
-      InstanceType: 't2.micro'
+      InstanceType: 't3.micro'
       SubnetId: !Ref SubnetForEc2
       SecurityGroupIds:
         - !Ref MySecurityGroup
