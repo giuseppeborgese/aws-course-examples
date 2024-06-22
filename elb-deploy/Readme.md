@@ -30,3 +30,6 @@ for i in {1..300}; do curl $ALB_URL ;sleep 1; done
 * create a target group with destination the application load balancer used before, call it alb-target-group
 * go in the network load balancer listener port 80 and select the target group just created 
 * run the script again and you will see the weight 50% 
+
+
+![diagram](https://raw.githubusercontent.com/giuseppeborgese/aws-course-examples/main/elb-deploy/diagram.png)
